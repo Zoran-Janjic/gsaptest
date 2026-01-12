@@ -37,7 +37,6 @@ window.addEventListener("load", () => {
         .from(".hero-eyebrow", { y: 20, autoAlpha: 0, duration: 1, ease: "power3.out" })
         .from(".hero h1", { y: 50, autoAlpha: 0, duration: 1.2, ease: "power4.out" }, "-=0.8")
         .from(".hero p", { y: 30, autoAlpha: 0, duration: 1 }, "-=0.8")
-        .from(".hero p", { y: 30, autoAlpha: 0, duration: 1 }, "-=0.8")
         .fromTo(".hero-cta",
             { scale: 0.9, autoAlpha: 0 },
             { scale: 1, autoAlpha: 1, duration: 0.8 },

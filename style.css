@@ -154,6 +154,8 @@ p {
   color: var(--accent);
   margin-bottom: 2rem;
   display: block;
+  visibility: hidden;
+  /* Prevent FOUC */
 }
 
 .hero h1 {
@@ -161,6 +163,8 @@ p {
   line-height: 0.95;
   margin-bottom: 2rem;
   text-shadow: 0 0 50px rgba(0, 210, 255, 0.1);
+  visibility: hidden;
+  /* Prevent FOUC */
 }
 
 .hero p {
@@ -168,6 +172,8 @@ p {
   max-width: 600px;
   margin: 0 auto;
   opacity: 0.9;
+  visibility: hidden;
+  /* Prevent FOUC */
 }
 
 .hero-cta {
