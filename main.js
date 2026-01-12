@@ -74,7 +74,7 @@ window.addEventListener("load", () => {
             toggleActions: "play none none none"
         },
         y: 50,
-        autoAlpha: 0,
+        // autoAlpha: 0, // Temporarily commented out to debug visibility
         duration: 0.8,
         stagger: 0.2,
         ease: "power2.out"
@@ -113,7 +113,7 @@ window.addEventListener("load", () => {
             toggleActions: "play none none none"
         },
         x: -30,
-        autoAlpha: 0,
+        // autoAlpha: 0,
         duration: 0.6,
         stagger: 0.1
     });
