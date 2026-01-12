@@ -352,13 +352,16 @@ p {
 .business-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
+  /* Increased gap */
+  justify-content: center;
+  /* Center items */
 }
 
 .business-list li {
-  flex: 1 1 30%;
+  flex: 0 1 350px;
+  /* Fixed basis, don't grow to fill width */
   background: rgba(20, 20, 30, 0.6);
-  /* Semi-transparent dark */
   backdrop-filter: blur(12px);
   padding: 2.5rem;
   border-radius: 16px;
@@ -367,6 +370,8 @@ p {
   align-items: flex-start;
   flex-direction: column;
   transition: 0.3s;
+  /* Ensure consistent height if content varies */
+  min-height: 200px;
 }
 
 .business-list li:hover {
@@ -425,42 +430,45 @@ p {
   color: #fff;
 }
 
-/* HISTORY */
+/* HISTORY TIMELINE */
 .history-timeline {
   position: relative;
-  border-left: 2px solid var(--border);
+  border-left: 2px solid rgba(0, 210, 255, 0.2);
   margin-left: 1rem;
-  padding-left: 3rem;
+  padding-left: 2.5rem;
+  margin-top: 2rem;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
 }
 
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -3.6rem;
-  top: 0.5rem;
-  width: 1rem;
-  height: 1rem;
-  background: var(--bg);
+  left: -3.15rem;
+  /* center on line */
+  top: 0.25rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: var(--bg-dark);
   border: 2px solid var(--accent);
   border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover::before {
+  background: var(--accent);
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.8);
 }
 
 .timeline-item .year {
-  font-size: 3rem;
-  font-family: var(--font-display);
-  opacity: 0.1;
-  position: absolute;
-  top: -1.5rem;
-  left: 0;
-  pointer-events: none;
-}
-
-.timeline-item .details h4 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: var(--accent);
