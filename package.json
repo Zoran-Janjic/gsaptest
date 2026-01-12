@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "./node_modules/.bin/vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
   "dependencies": {
-    "vite": "^5.0.0",
     "gsap": "^3.12.5",
     "lenis": "^1.0.42"
   }
